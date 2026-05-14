@@ -10,7 +10,7 @@ void setup() {
 
  // Set PD2 as INPUT 
     DDRD &= ~(1 << DDD2);
-    
+
     void loop() {
 
     // -------- Status LED Blink --------
@@ -18,3 +18,5 @@ void setup() {
     _delay_ms(500);
     PORTB &= ~(1 << PORTB5);  // LED OFF
     _delay_ms(500);
+     // -------- Read PIR Sensor --------
+    if (PIND & (1 << PIND2))
