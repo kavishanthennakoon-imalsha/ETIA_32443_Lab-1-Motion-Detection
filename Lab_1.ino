@@ -19,4 +19,9 @@ void setup() {
     PORTB &= ~(1 << PORTB5);  // LED OFF
     _delay_ms(500);
      // -------- Read PIR Sensor --------
-    if (PIND & (1 << PIND2))
+    if (PIND & (1 << PIND2)) {
+       
+        PORTB |= (1 << PORTB0);  // Alert LED ON
+        PORTB |= (1 << PORTB1);  // Buzzer ON
+
+        _delay_ms(5000);  // 5 seconds delay
