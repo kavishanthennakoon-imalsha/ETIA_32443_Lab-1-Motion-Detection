@@ -25,3 +25,9 @@ void setup() {
         PORTB |= (1 << PORTB1);  // Buzzer ON
 
         _delay_ms(5000);  // 5 seconds delay
+         // Turn OFF
+        PORTB &= ~(1 << PORTB0);
+        PORTB &= ~(1 << PORTB1);
+    }
+}
+
