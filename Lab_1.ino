@@ -30,4 +30,13 @@ void setup() {
         PORTB &= ~(1 << PORTB1);
     }
 }
+int main(void) {
+    setup();
 
+    
+    _delay_ms(30000);  
+
+    while (1) {
+        loop();
+    }
+}
